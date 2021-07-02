@@ -1,0 +1,65 @@
+---
+---
+
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+
+@layer components {
+    .category--title {
+        @apply text-sm border-b-2 border-yellow-500 bg-blue-800 text-blue-100 px-2 py-1;
+    }
+
+    .dot {
+        @apply inline-block cursor-pointer w-4 h-4  border-white rounded-full bg-white;
+    }
+
+    .active {
+        @apply border-yellow-500 border-2;
+    }
+
+    .slide-arrows {
+        @apply inline-block cursor-pointer text-xl bg-white m-3 p-2 rounded-sm;
+    }
+
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+
+    @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+
+    /* Blog */
+    article {
+
+        p {
+            @apply mb-4 text-gray-800;
+        }
+
+        h1 {
+            @apply text-2xl mb-1 mt-1 text-blue-900;
+        }
+
+        h2 {
+            @apply text-xl mb-2 text-blue-800;
+        }
+
+        img {
+            @apply inline-block h-full max-h-96 w-5/12 my-3;
+        }
+    }
+}
