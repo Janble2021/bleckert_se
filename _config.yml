@@ -4,7 +4,12 @@ url: "https://bleckert.se" # the base hostname & protocol for your site, e.g. ht
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "Segling@bleckert.se" # the name of your site, e.g. ACME Corp.
 
-exclude: []
+sass:
+  load_paths:
+    - _sass
+    - node_modules
+
+include: ["node_modules/tailwindcss"]
 
 #posts
 permalink: /blog/:title
