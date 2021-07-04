@@ -1,11 +1,14 @@
 # _config.yml
 
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://bleckert.se" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "Segling@bleckert.se" # the name of your site, e.g. ACME Corp.
 
+#posts
+permalink: /blog/:title
+
 #pagnation plugin
-paginate: 2
+paginate: 5
 
 plugins:
   - jekyll-postcss

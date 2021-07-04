@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "Huvudmeny"
+category: ""
 title: "Båten vi seglar"
 image: ""
 ---

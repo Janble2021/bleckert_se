@@ -9,8 +9,24 @@
 
 
 @layer components {
-    .category--title {
-        @apply text-sm border-b-2 border-yellow-500 bg-blue-800 text-blue-100 px-2 py-1;
+    .category-title {
+        @apply text-sm border-b-2 font-bold border-yellow-500 bg-blue-800 text-blue-100 px-2 py-1;
+    }
+
+    .category-square {
+        @apply inline-block align-top mt-1.5 w-2 h-2 bg-yellow-500;
+    }
+
+    .category-list {
+        @apply text-sm list-disc list-inside truncate py-2 pb-6;
+    }
+
+    .category-items {
+        @apply ml-2 hover:text-yellow-500;
+    }
+
+    .category-items-bullet {
+        @apply text-blue-700;
     }
 
     .dot {
@@ -60,6 +76,10 @@
 
         img {
             @apply inline-block h-full max-h-96 w-5/12 my-3;
+        }
+
+        a img {
+            @apply w-full
         }
     }
 }

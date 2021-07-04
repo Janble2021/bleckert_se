@@ -37,35 +37,63 @@ title: "Hem"
     <div class="bg-white flex w-full max-w-4xl px-4 py-8">
         <!-- left column -->
         <div class="hidden md:block w-1/3 border-r-2 border-blue-800 mr-4 pr-4">
-
-            {% for category in site.categories %}
-            <div class="category--title">
-                <span class="inline-block align-top mt-1.5 w-2 h-2 bg-yellow-500"></span>
-                {{ category | first }}
+            <!-- main menu -->
+            <div class="category-title">
+                <span class="category-square"></span>
+                Huvudmeny
             </div>
-            <ul class="text-sm list-disc list-inside truncate py-2 pb-6">
+            <ul class="category-list list-none">
+                {% for item in site.data.menu_items %}
 
-                {% for post in category.last %}
-                <li><a class="hover:text-yellow-500" href="{{ post.url }}">{{ post.title }}</a></li>
+                    <li><a class="category-items" href="{{ item.link }}">
+                        <i class="category-items-bullet fas fa-caret-right"></i>
+                        {{ item.name }}
+                        {% if item.link contains "http" %}
+                            <i class="fas fa-external-link-alt text-gray-400"></i>
+                        {% endif %}
+                        </a>
+                    </li>
+
                 {% endfor %}
             </ul>
+            <!-- for every category in posts -->
+            {% for category in site.categories %}
+                {% unless category.first == "" %}
+                    <div class="category-title">
+                        <span class="category-square"></span>
+                        {{ category | first }}
+                    </div>
+                    <ul class="category-list list-none">
+                        {% assign sortedPosts = category.last | sort: 'title' %}
+                        {% for post in sortedPosts %}
+                            <li><a class="category-items" href="{{ post.url }}">
+                                <i class="category-items-bullet fas fa-caret-right"></i>
+                                {{ post.title }}
+                                </a></li>
+                        {% endfor %}
+                    </ul>
+                {% endunless %}
             {% endfor %}
+
+
         </div>
 
 
-        <!-- right column -->
+        <!-- right column (posts) -->
         <div class="md:w-2/3 w-full">
             <!-- post -->
             {% for post in paginator.posts %}
-            <a href="{{post.url}}" class="block mb-12 shadow-md hover:bg-gray-200">
-                <div class="p-2">
-                    {% unless post.image == nil or post.image == "" %}
-                    <img class="w-full object-cover max-h-60 mb-5" src="{{post.image}}" alt="">
-                    {% endunless %}
-                    <div class="text-xl text-blue-700">{{post.title}}</div>
-                    <div class="text-sm">Skapad den {{ post.date | date: "%d %B, %Y" }} | Träffar: ?</div>
-                </div>
-            </a>
+                {% unless post.category == "Huvudmeny" %}
+                <a href="{{post.url}}" class="block mb-12 shadow-md hover:bg-gray-200">
+                    <div class="p-2">
+                        {% unless post.image == nil or post.image == "" %}
+                        <img class="w-full object-cover max-h-60 mb-5" src="{{post.image}}" alt="">
+                        {% endunless %}
+                        <div class="text-xl text-blue-700">{{post.title}}</div>
+                        <div class="text-sm">Skapad den {{ post.date | date: "%d %B, %Y" }} | Träffar: ?</div>
+                    </div>
+                </a>
+                {% endunless %}
             {% endfor %}
 
             <!-- Pagination links -->
