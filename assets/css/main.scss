@@ -30,11 +30,11 @@
     }
 
     .dot {
-        @apply inline-block cursor-pointer w-4 h-4  border-white rounded-full bg-white;
+        @apply inline-block cursor-pointer w-4 h-4 align-middle border border-white rounded-full bg-transparent;
     }
 
     .active {
-        @apply border-yellow-500 border-2;
+        @apply bg-white;
     }
 
     .slide-arrows {
