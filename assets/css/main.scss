@@ -67,8 +67,6 @@
         @apply p-2 bg-blue-700 hover:bg-blue-800 text-white rounded-sm;
     }
 
-    .button-enabled
-
     /* Blog */
     article {
         p {
@@ -88,7 +86,7 @@
         }
 
         a img {
-            @apply w-full
+            @apply w-full;
         }
     }
 }
