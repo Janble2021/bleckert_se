@@ -7,14 +7,20 @@ title: "Hem"
 <!-- blue block -->
 <div class="bg-blue-700 pt-20 pb-10 flex flex-col items-center shadow-md">
 
-    <!-- slideshow images -->
-    {% for image in site.static_files %}
-        {% if image.path contains 'img/slideshow' %}
-            <img class="mySlides fade w-full max-w-4xl mx-2" src="{{ site.baseurl }}{{ image.path }}" alt="" />
-        {% endif %}
-    {% endfor %}
+    <div class="relative">
+        <!-- slideshow images -->
+        {% for image in site.static_files %}
+            {% if image.path contains 'img/slideshow' %}
+                <img class="mySlides fade w-full max-w-4xl mx-2" src="{{ site.baseurl }}{{ image.path }}" alt="" />
+            {% endif %}
+        {% endfor %}
 
-    <!-- slideshow buttons -->
+        <!-- arrows -->
+        <a class="slide-arrows left-0 prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="slide-arrows right-0 next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- slideshow dots -->
     <div class="mt-3">
         {% assign i = 0 %}
         {% for image in site.static_files %}
@@ -23,17 +29,7 @@ title: "Hem"
                 <span class="dot" onclick="currentSlide({{i}})"></span>
             {% endif %}
         {% endfor %}
-
     </div>
-
-
-    <!-- arrows -->
-    <div class="">
-        <a class="slide-arrows prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="slide-arrows next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-
-
 </div>
 
 

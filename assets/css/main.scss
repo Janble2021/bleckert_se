@@ -38,7 +38,7 @@
     }
 
     .slide-arrows {
-        @apply inline-block cursor-pointer text-xl bg-white m-3 p-2 rounded-sm;
+        @apply inline-block absolute -mt-5 top-1/2 select-none cursor-pointer text-xl text-blue-700 bg-white hover:bg-blue-200 m-3 p-2 rounded-sm shadow-sm;
     }
 
     /* Fading animation */
