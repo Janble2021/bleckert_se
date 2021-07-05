@@ -1,5 +1,6 @@
 // slideshow on index page
-if (window.location.pathname === '/') {
+
+if (document.getElementsByClassName("mySlides").length != 0) {
 
   var slideIndex = 1;
   showSlides(slideIndex);

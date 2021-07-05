@@ -5,8 +5,8 @@ title: "Hem"
 
 
 <!-- blue block -->
-<div class="bg-blue-700 pt-20 pb-10 flex flex-col items-center shadow-md">
-
+<div class="bg-blue-700 pt-2 md:pt-20 pb-10 flex flex-col items-center shadow-md">
+    <!-- Slideshow -->
     <div class="relative max-w-4xl mx-2">
         <!-- slideshow images -->
         {% for image in site.static_files %}
@@ -102,10 +102,10 @@ title: "Hem"
                 <!-- Enabled back -->
                 {% if paginator.previous_page %}
                 <a href="{{ paginator.previous_page_path }}"
-                    class="p-2 bg-blue-700 hover:bg-blue-800 text-white rounded-sm">&#10094; Tillbaka</a>
+                    class="paginate-button-enabled">&#10094; Tillbaka</a>
                 {% else %}
                 <!-- Disabled back -->
-                <span class="p-2 bg-gray-500 text-gray-100 rounded-sm">&#10094; Tillbaka</span>
+                <span class="paginate-button-disabled">&#10094; Tillbaka</span>
                 {% endif %}
                 <!-- Page number -->
                 <span class="page_number px-2">
@@ -114,10 +114,10 @@ title: "Hem"
                 {% if paginator.next_page %}
                 <!-- Enabled next -->
                 <a href="{{ paginator.next_page_path }}"
-                    class="p-2 bg-blue-700 text-white rounded-sm hover:bg-blue-800">Nästa &#10095;</a>
+                    class="paginate-button-enabled">Nästa &#10095;</a>
                 {% else %}
                 <!-- Disabled next -->
-                <span class="p-2 bg-gray-500 text-gray-100 rounded-sm">Nästa &#10095;</span>
+                <span class="paginate-button-disabled">Nästa &#10095;</span>
                 {% endif %}
             </div>
         </div>
