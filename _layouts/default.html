@@ -12,10 +12,15 @@
     <link href="/assets/icons/fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet"> <!--load all styles -->
 
   </head>
-  <body class="bg-gray-300">
+  <body class="bg-gray-300" 
+  {% if site.enable_cookies == true %}
+    onload="cookieBanner()"
+  {% endif %}
+  >
     {% include header.html %}
     {{ content }}
     {% include footer.html %}
+    {% include cookies.html %}
 
     <script async src="/assets/js/script.js"></script>
   </body>

@@ -11,6 +11,9 @@ sass:
 
 include: ["node_modules/tailwindcss"]
 
+# cookies
+enable_cookies: false
+
 #posts
 permalink: /blog/:title
 
