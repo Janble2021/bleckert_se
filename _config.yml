@@ -2,7 +2,7 @@
 
 url: "https://bleckert.se" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-title: "Segling@bleckert.se" # the name of your site, e.g. ACME Corp.
+title: "bleckert.se" # the name of your site, e.g. ACME Corp.
 
 sass:
   load_paths:

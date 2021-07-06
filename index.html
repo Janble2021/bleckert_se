@@ -91,7 +91,12 @@ title: "Hem"
                         <img class="w-full object-cover max-h-60 mb-5" src="{{post.image}}" alt="">
                         {% endunless %}
                         <div class="text-xl text-blue-700">{{post.title}}</div>
-                        <div class="text-sm">Skapad den {{ post.date | date: "%d %B, %Y" }} | Träffar: ?</div>
+                        <div class="text-sm">
+                            Skapad den {{ post.date | date: "%d %B, %Y" }}
+                            {% if site.enable_cookies == true %}
+                                 | Träffar: ? 
+                            {% endif %}
+                        </div>
                     </div>
                 </a>
                 {% endunless %}

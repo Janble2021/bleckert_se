@@ -1,9 +1,13 @@
 <div id="cookie_banner" class="hidden items-center justify-between sticky bottom-0 bg-white p-4">
-    <p class=""><i class="fas fa-cookie-bite text-yellow-600 fa-2x align-middle mr-3"></i>Denna sidan använder "Kakor" för att få reda på antal besökare och vad de besöker. 
-        <a class="underline text-blue-900" href="https://www.pts.se/cookies">Läs mer</a>
-    </p>
     <div class="">
-        <button class="ml-2 py-2 px-3 text-white bg-blue-500 rounded-md" onclick="allowCookies(false)">Endast nödvändiga</button>
+        <i class="fas fa-cookie-bite text-yellow-600 fa-2x align-middle mr-3"></i>
+        <p class="inline-block">
+            Denna sidan använder "Kakor" för att få reda på antal besökare och vad de besöker.
+            <a class="underline text-blue-900" href="https://www.pts.se/cookies">Läs mer</a>
+        </p>
+    </div>
+    <div class="flex">
+        <button class="ml-2 py-2 px-3 text-blue-500 border-2 border-blue-500 bg-transparent rounded-md" onclick="allowCookies(false)">Neka</button>
         <button class="ml-2 py-2 px-3 text-white bg-blue-500 rounded-md" onclick="allowCookies(true)">Tillåt</button>
     </div>
 </div>
