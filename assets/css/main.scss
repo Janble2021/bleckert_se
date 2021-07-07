@@ -38,7 +38,26 @@
     }
 
     .slide-arrows {
-        @apply inline-block absolute -mt-5 top-1/2 select-none cursor-pointer text-xl text-blue-700 bg-white hover:bg-blue-200 m-3 p-2 rounded-sm shadow-sm;
+        @apply 
+            inline-block
+            absolute
+            px-2
+            top-0
+            select-none
+            cursor-pointer
+            text-xl
+            h-full
+            text-white
+            bg-blue-900 bg-opacity-60
+            hover:bg-white
+            hover:text-blue-700
+            hover:bg-opacity-100
+            md:bg-opacity-0
+            md:px-4
+            rounded-sm
+            shadow-sm
+            transition-colors duration-300 ease-in-out
+        ;
     }
 
     /* Fading animation for slideshow*/
@@ -82,7 +101,7 @@
         }
 
         img {
-            @apply inline-block h-full max-h-96 w-5/12 my-3;
+            @apply inline-block h-full max-h-96 w-auto md:w-5/12 my-3;
         }
 
         a img {

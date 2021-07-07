@@ -1,5 +1,5 @@
-// slideshow on index page
 
+// slideshow on index page
 if (document.getElementsByClassName("mySlides").length != 0) {
 
   var slideIndex = 1;
@@ -28,11 +28,10 @@ if (document.getElementsByClassName("mySlides").length != 0) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
   }
-
   setInterval(function () { plusSlides(1); }, 5000);
 }
 
-
+// displays a banner with cookie choice
 function cookieBanner() {
   var banner = document.getElementById("cookie_banner");
   var consent = localStorage.getItem("cookie_consent");
@@ -43,6 +42,7 @@ function cookieBanner() {
   }
 }
 
+// sets and checks cookie choice
 function allowCookies(choice) {
   if (choice == true) {
     localStorage.setItem("cookie_consent", true);
@@ -50,4 +50,20 @@ function allowCookies(choice) {
     localStorage.setItem("cookie_consent", false);
   }
   cookieBanner()
+}
+
+// when user is not scrolled to the top
+setInterval(function () { scrollArrow(); }, 100);
+function scrollArrow() {
+  var arrow = document.getElementById("scroll_arrow");
+  if (window.scrollY > 0) {
+    arrow.style.display = "block";
+  } else {
+    arrow.style.display = "none";
+  }
+}
+
+// scroll user to top
+function scrollToTop() {
+  window.scrollTo(0, 0);
 }

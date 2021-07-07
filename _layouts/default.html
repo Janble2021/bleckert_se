@@ -31,6 +31,9 @@
     {% include header.html %}
     {{ content }}
     {% include footer.html %}
+    <button id="scroll_arrow" class="fixed bottom-4 right-4 px-3 py-2 rounded-full shadow-lg bg-white" onclick="scrollToTop()">
+      <i class="fas fa-arrow-up text-3xl text-blue-700"></i>
+    </button>
     {% include cookies.html %}
 
     <script async src="/assets/js/script.js"></script>
