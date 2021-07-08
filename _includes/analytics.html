@@ -1,12 +1,22 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PZTFX8G2G8"></script>
 <script>
-  if (localStorage.getItem("cookie_consent") == true) {
-    console.log("Analytics active")
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-PZTFX8G2G8');
+  if (localStorage.getItem("cookie_consent") != true) {
+    // disable tracking
+    window['ga-disable-G-PZTFX8G2G8'] = true;
+    console.debug("Analytics disabled")
+  } 
+  
+  // enable tracking
+  else {
+    window['ga-disable-G-PZTFX8G2G8'] = false;
+    console.debug("Analytics enabled")
   }
+
+  console.log("Analytics active")
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PZTFX8G2G8');
 </script>
