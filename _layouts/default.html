@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "SV" }}">
   <head>
+    {% if jekyll.environment == "production" %}
+      {% include analytics.html %}
+    {% endif %}
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="version" content="{{site.time}}">
@@ -21,10 +25,6 @@
     <!-- stylesheet -->
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
     <link href="/assets/icons/fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet"> <!--load all styles -->
-
-    {% if jekyll.environment == "production" %}
-      {% include analytics.html %}
-    {% endif %}
 
   </head>
   <body class="bg-gray-300" 
