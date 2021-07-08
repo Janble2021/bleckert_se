@@ -1,7 +1,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PZTFX8G2G8"></script>
 <script>
-  if (localStorage.getItem("cookie_consent") != true) {
+  if (localStorage.getItem("cookie_consent") != "true") {
     // disable tracking
     window['ga-disable-G-PZTFX8G2G8'] = true;
     console.debug("Analytics disabled")
@@ -13,7 +13,7 @@
     console.debug("Analytics enabled")
   }
 
-  console.log("Analytics active")
+  console.debug("Analytics active")
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
