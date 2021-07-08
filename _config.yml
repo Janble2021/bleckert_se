@@ -8,6 +8,7 @@ sass:
   load_paths:
     - _sass
     - node_modules
+  style: compressed
 
 include: ["node_modules/tailwindcss"]
 

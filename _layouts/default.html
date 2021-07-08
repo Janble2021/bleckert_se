@@ -28,10 +28,14 @@
     onload="cookieBanner()"
   {% endif %}
   >
+    {% unless jekyll.environment == "production" %}
+      <div class="sticky w-full text-center bg-yellow-400">DEV</div>
+    {% endunless %}
     {% include header.html %}
     {{ content }}
     {% include footer.html %}
-    <button id="scroll_arrow" class="fixed bottom-4 right-4 px-3 py-2 rounded-full shadow-lg bg-white" onclick="scrollToTop()">
+    <!-- scroll arrow -->
+    <button id="scroll_arrow" class="hidden fixed bottom-4 right-4 px-3 py-2 rounded-full shadow-lg bg-white" onclick="scrollToTop()">
       <i class="fas fa-arrow-up text-3xl text-blue-700"></i>
     </button>
     {% include cookies.html %}

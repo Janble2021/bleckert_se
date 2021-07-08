@@ -53,9 +53,9 @@ function allowCookies(choice) {
 }
 
 // when user is not scrolled to the top
-setInterval(function () { scrollArrow(); }, 100);
+var arrow = document.getElementById("scroll_arrow");
+window.onscroll = function() {scrollArrow()};
 function scrollArrow() {
-  var arrow = document.getElementById("scroll_arrow");
   if (window.scrollY > 0) {
     arrow.style.display = "block";
   } else {
@@ -65,5 +65,5 @@ function scrollArrow() {
 
 // scroll user to top
 function scrollToTop() {
-  window.scrollTo(0, 0);
+  window.scrollTo({top: 0, behavior: 'smooth'});
 }
