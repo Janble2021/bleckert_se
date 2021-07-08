@@ -12,8 +12,11 @@ sass:
 
 include: ["node_modules/tailwindcss"]
 
+# time zone
+timezone: SE
+
 # cookies
-enable_cookies: false
+enable_cookies: true
 
 #posts
 permalink: /blog/:title
