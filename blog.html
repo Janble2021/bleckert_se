@@ -13,7 +13,7 @@ title: "Blogg"
         </div>
 
         {% for post in site.posts %}
-            <a href="{{post.url}}" class="block bg-white hover:bg-gray-200 text-blue-700 p-2 my-4 text-xl shadow-sm rounded-md">
+            <a href="{{post.url}}" class="block bg-white hover:bg-gray-200 text-blue-700 p-2 my-4 text-xl shadow-md rounded-md">
                 {{post.title}}
                 {% include post_description.html %}
             </a>
