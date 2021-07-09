@@ -67,3 +67,26 @@ function scrollArrow() {
 function scrollToTop() {
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
+
+function changeCookieConsent() {
+  var checkbox = document.getElementById('cookie_consent_switch');
+  if (checkbox.checked != true) {
+    allowCookies(false)
+  } else {
+    allowCookies(true)
+  }
+}
+
+if (document.getElementById('cookie_consent_switch') != null) {
+  checkCookieConsent()
+}
+
+function checkCookieConsent() {
+  console.log("test")
+  var checkbox = document.getElementById('cookie_consent_switch');
+  if (localStorage.getItem("cookie_consent") != "true") {
+    checkbox.checked = false;
+  } else {
+    checkbox.checked = true;
+  }
+}
