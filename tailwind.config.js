@@ -4,6 +4,8 @@ module.exports = {
     './_layouts/**/*.html',
     './_posts/*.md',
     './*.html',
+    './_site/**/*.html',
+		'./_site/*.html'
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
