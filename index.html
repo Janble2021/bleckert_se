@@ -81,13 +81,11 @@ title: "Hem"
 
 
         <!-- right column (posts) -->
-        <div id="blog_view" class="md:w-2/3 w-full">
-            <div class="text-2xl text-blue-800 border-b-2 font-bold border-yellow-500 mb-4">Inlägg</div>
+        <div class="md:w-2/3 w-full">
             <!-- post -->
             {% for post in paginator.posts %}
                 {% unless post.category == "Huvudmeny" %}
-                {% unless post.category == "Bloggbok" %}
-                <a href="{{post.url}}" class="block mb-8 shadow-md hover:bg-gray-200">
+                <a href="{{post.url}}" class="block mb-12 shadow-md hover:bg-gray-200">
                     <div class="p-2">
                         {% unless post.image == nil or post.image == "" %}
                         <img class="w-full object-cover max-h-60 mb-5" src="{{post.image}}" alt="">
@@ -97,14 +95,13 @@ title: "Hem"
                     </div>
                 </a>
                 {% endunless %}
-                {% endunless %}
             {% endfor %}
 
             <!-- Pagination links -->
             <div class="flex justify-center items-center">
                 <!-- Enabled back -->
                 {% if paginator.previous_page %}
-                <a href="{{ paginator.previous_page_path }}#blog_view"
+                <a href="{{ paginator.previous_page_path }}"
                     class="paginate-button-enabled">&#10094; Tillbaka</a>
                 {% else %}
                 <!-- Disabled back -->
@@ -116,7 +113,7 @@ title: "Hem"
                 </span>
                 {% if paginator.next_page %}
                 <!-- Enabled next -->
-                <a href="{{ paginator.next_page_path }}#blog_view"
+                <a href="{{ paginator.next_page_path }}"
                     class="paginate-button-enabled">Nästa &#10095;</a>
                 {% else %}
                 <!-- Disabled next -->
