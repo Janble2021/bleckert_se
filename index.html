@@ -85,6 +85,7 @@ title: "Hem"
             <!-- post -->
             {% for post in paginator.posts %}
                 {% unless post.category == "Huvudmeny" %}
+                {% unless post.category == "Bloggbok" %}
                 <a href="{{post.url}}" class="block mb-12 shadow-md hover:bg-gray-200">
                     <div class="p-2">
                         {% unless post.image == nil or post.image == "" %}
@@ -95,13 +96,14 @@ title: "Hem"
                     </div>
                 </a>
                 {% endunless %}
+                {% endunless %}
             {% endfor %}
 
             <!-- Pagination links -->
             <div class="flex justify-center items-center">
                 <!-- Enabled back -->
                 {% if paginator.previous_page %}
-                <a href="{{ paginator.previous_page_path }}"
+                <a href="{{ paginator.previous_page_path }}#blog_view"
                     class="paginate-button-enabled">&#10094; Tillbaka</a>
                 {% else %}
                 <!-- Disabled back -->
@@ -113,7 +115,7 @@ title: "Hem"
                 </span>
                 {% if paginator.next_page %}
                 <!-- Enabled next -->
-                <a href="{{ paginator.next_page_path }}"
+                <a href="{{ paginator.next_page_path }}#blog_view"
                     class="paginate-button-enabled">Nästa &#10095;</a>
                 {% else %}
                 <!-- Disabled next -->
