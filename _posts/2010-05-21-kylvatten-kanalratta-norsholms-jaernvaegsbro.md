@@ -1,0 +1,21 @@
+---
+layout: post
+category: ""
+title: "Kylvatten, kanalråtta Norsholms järnvägsbro"
+image: ""
+---
+
+<p class="MsoNormal">Det började ju så bra. Sommarväder, en god natts sömn.<span> </span>Efter att ha löst kanalbiljetten i Mem började vi slussningen. Vi var fyra båtar till en början - ett stort schabrak till motorbåt som stannade i Söderköping, en svensk familj i en Scampi på väg hem till Göteborg från Stockholm där båten köptes samt en fransk Hallberg &amp; Rassy 37 från Brittany med fem franska grå pantrar ombord, förutom oss.</p>
+<p class="MsoNormal"><img src="images/stories/bildspel/gotakanal2010/0120motberg_10.jpg" border="0" alt="Kapten Daniel" width="270" height="380" style="vertical-align: middle; border: 0;" /></p>
+<p class="MsoNormal"><img src="images/stories/bildspel/gotakanal2010/0120motberg_20.jpg" border="0" alt="HR och Scampi" width="360" height="290" style="vertical-align: middle; border: 0;" /></p>
+<p class="MsoNormal">Precis efter näst sista slussen innan Söderköping hör jag inte längre det plaskande ljudet från kylvatten blandat med avgaser. Vad i …. Kylvatten-lampan lyser rött (kul att den fungerar i alla fall…) och det är bara att stänga maskin. De andra tre glider iväg mot Söderköping. Hoppas det är impellern, det lilla propellern i gummi som pumpar upp sjövatten för kylning till motorn. En sådan har jag i alla fall med i reserv. Fram med verktygslådan och efter en halvtimme provstartar jag motorn – YES ! Det fungerar även om det läcker lite vatten. In mot Söderköping och slussvakten väntade in oss – pust…<span> </span>I sista slussen ser vi plötsligt en simmande råtta som på något vis hamnat i slussbassängen.<span> </span>Kanalbolagets slussvakter lyckades rädda livet på den lille kraken.<span> </span></p>
+<p class="MsoNormal"><img src="images/stories/bildspel/gotakanal2010/0120motberg_30.jpg" border="0" alt="Kanalråttan i slussbassängen" width="360" height="258" style="vertical-align: middle; border: 0;" /></p>
+<p class="MsoNormal">Snabb tilläggning i Söderköping för nu var det bråttom att proviantera på<span> </span>bolaget och ICA nära. Vi hann ta en glass innan det var dags att gå vidare mot väst. Nu började slussningen på allvar. Det gick ganska bra – avfendringen inne i slussen gick fint med två stora kulfendrar. Däremot drog jag tyvärr upp några repor i fribordet pga de låga kajkanterna när själva slussningsfasen var klar eftersom fendrarna då kom alldeles för högt.<span> </span></p>
+<p class="MsoNormal"><img src="images/stories/bildspel/gotakanal2010/0120motberg_40.jpg" border="0" alt="Karin håller förtampen" width="360" height="290" style="vertical-align: middle; border: 0;" /></p>
+<p class="MsoNormal">Ett speciellt hedersomnämnande till Göta Kanals slussvakter, De tog sig an Daniel och lät honom manövrera slussar och även broarna. Höjdpunkten var helt klart den handmanövrerade slussen – Daniel tog i för kung och fosterland och lyckades både öppna och stänga slussportarna.</p>
+<p class="MsoNormal"><img src="images/stories/bildspel/gotakanal2010/0120motberg_50.jpg" border="0" alt="Daniel slussvakt" width="360" height="282" style="vertical-align: middle; border: 0;" /></p>
+<p class="MsoNormal">In mot Norsholm fick han åka bil med slussvakterna och öppna broarna framför oss. Vid 18-tiden gick vi in i Norsholms gästhamn för att vänta på broöppningen vid sjutiden. Vägbron gick och även den lilla slussen in till järnvägsbron. Den rör sig inte ur fläcken ! Febril aktivitet utbryter och vi får höra att det har strulat med bron flera gånger de senaste dagarna.<span> </span>Klockan blir över åtta och det planerade restaurangbesöket i Berg 14 sjömil bort får vi ställa in. Så småningom kommer vi iväg men sent och  det blir insegling i Nedre Berg i mörker strax före midnatt.</p>
+<p class="MsoNormal"><img src="images/stories/bildspel/gotakanal2010/0120motberg_60.jpg" border="0" alt="Så nära - men ändå så långt till Roxen" width="270" height="380" style="vertical-align: middle; border: 0;" /></p>
+<p><img src="images/stories/bildspel/gotakanal2010/0120motberg_70.jpg" border="0" alt="Uppkrokad" width="360" height="290" style="vertical-align: middle; border: 0;" /></p>
+
+2010-05-21 23:13:29
