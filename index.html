@@ -81,7 +81,7 @@ title: "Hem"
 
 
         <!-- right column (posts) -->
-        <div class="md:w-2/3 w-full">
+        <div id="blog_view" class="md:w-2/3 w-full">
             <!-- post -->
             {% for post in paginator.posts %}
                 {% unless post.category == "Huvudmeny" %}
