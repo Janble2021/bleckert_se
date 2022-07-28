@@ -5,6 +5,8 @@ Site: https://bleckert.se/
 
 Site: https://janble2021.github.io/
 
+Use "bundle exec jekyll serve" for local development.
+
 # General
 Site uses:
 1. Tailwind for styling.

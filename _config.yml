@@ -13,7 +13,7 @@ sass:
 include: ["node_modules/tailwindcss"]
 
 # time zone
-timezone: SE
+timezone: Europe/Stockholm
 
 # cookies
 enable_cookies: true
