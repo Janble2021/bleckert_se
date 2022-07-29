@@ -1,0 +1,55 @@
+backend:
+  name: github
+  repo:  Janble2021/bleckert_se
+
+  branch: main
+  accept_roles:
+    - admin
+    - editor
+
+# when using the default proxy server port
+local_backend: True
+
+media_folder: "/assets/blog_media"
+public_folder: "/assets/blog_media"
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "website-settings"
+    label: "website settings"
+    files:
+      - label: "website settings"
+        name: "site"
+        file: "_data/site.yml"
+        fields:
+          - label: "E-post"
+            name: "main_email"
+            widget: "string"
+          - label: "test namn"
+            name: "test_name"
+            widget: "string"
+
+  - label: "Blog posts"
+    name: "Blog-posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - label: "layout"
+        name: "layout"
+        widget: "hidden"
+        default: "blog_post"
+      - label: "Bild"
+        name: "image"
+        widget: "image"
+        required: true
+      - label: "Rubrik"
+        name: "title"
+        widget: "string"
+      - label: "Beskrivning"
+        name: "description"
+        widget: "text"
+      - label: "Inlägg"
+        name: "body"
+        widget: "markdown"
