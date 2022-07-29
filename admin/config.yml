@@ -1,7 +1,6 @@
 backend:
   name: github
   repo: Janble2021/bleckert_se
-
   branch: main
   accept_roles:
     - admin
@@ -26,16 +25,16 @@ collections:
         name: "layout"
         widget: "hidden"
         default: "post"
+      - label: "Titel"
+        name: "title"
+        widget: "string"
       - label: "Bild"
         name: "image"
         widget: "image"
         required: false
-      - label: "Rubrik"
-        name: "title"
+      - label: "Kategori"
+        name: "category"
         widget: "string"
-      - label: "Beskrivning"
-        name: "description"
-        widget: "text"
-      - label: "Inlägg"
+      - label: "Text"
         name: "body"
         widget: "markdown"
