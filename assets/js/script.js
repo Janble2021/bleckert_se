@@ -90,3 +90,45 @@ function checkCookieConsent() {
     checkbox.checked = true;
   }
 }
+
+// Searches the posts.json and filters the results based on the search term
+const search = document.getElementById('search');
+const matchList = document.getElementById('match-list');
+
+const searchStates = async searchText => {
+  const res = await fetch('posts.json');
+  const states = await res.json();
+
+  // outupt the filtered results to the page
+  let matches = states.filter(state => {
+    const regex = new RegExp(`^${searchText}`, 'gi');
+    return state.title.match(regex) || state.category.match(regex);
+  });
+
+  if (searchText.length === 0) {
+    matches = [];
+    matchList.innerHTML = '';
+  }
+
+  outputHtml(matches);
+}
+
+// show results in HTML
+const outputHtml = matches => {
+  if (matches.length > 0) {
+    const html = matches.map(match => `
+      <a href="${match.url}" class="block mb-4 border-b-2 border-gray-600 hover:bg-gray-300">
+        <div class="px-4">
+          <h3 class="text-xl text-blue-700">${match.title}</h3>
+          <p>Kategori: ${match.category}</p>
+          <p>Datum: ${match.date}</p>
+        </div>
+      </a>
+    `).join('');
+    matchList.innerHTML = html;
+  } else {
+    matchList.innerHTML = '';
+  }
+}
+
+search.addEventListener('input', () => searchStates(search.value));

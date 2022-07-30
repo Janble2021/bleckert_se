@@ -10,9 +10,9 @@ title: "Hem"
     <div class="relative flex max-w-4xl h-64 w-full rounded-sm shadow-md bg-white">
         <!-- slideshow images -->
         {% for image in site.static_files %}
-            {% if image.path contains 'img/slideshow' %}
-                <img class="mySlides fade w-full object-cover rounded-sm" src="{{ site.baseurl }}{{ image.path }}" alt="" />
-            {% endif %}
+        {% if image.path contains 'img/slideshow' %}
+        <img class="mySlides fade w-full object-cover rounded-sm" src="{{ site.baseurl }}{{ image.path }}" alt="" />
+        {% endif %}
         {% endfor %}
 
         <!-- arrows -->
@@ -24,10 +24,10 @@ title: "Hem"
     <div class="hidden md:block mt-3">
         {% assign i = 0 %}
         {% for image in site.static_files %}
-            {% if image.path contains 'img/slideshow' %}
-                {% assign i = i | plus:1 %}
-                <button class="dot" aria-label="image index {{i}}" onclick="currentSlide({{i}})"></button>
-            {% endif %}
+        {% if image.path contains 'img/slideshow' %}
+        {% assign i = i | plus:1 %}
+        <button class="dot" aria-label="image index {{i}}" onclick="currentSlide({{i}})"></button>
+        {% endif %}
         {% endfor %}
     </div>
 </div>
@@ -46,34 +46,34 @@ title: "Hem"
             <ul class="category-list list-none">
                 {% for item in site.data.menu_items %}
 
-                    <li><a class="category-items" href="{{ item.link }}">
+                <li><a class="category-items" href="{{ item.link }}">
                         <i class="category-items-bullet fas fa-caret-right"></i>
                         {{ item.name }}
                         {% if item.link contains "http" %}
-                            <i class="fas fa-external-link-alt text-gray-400"></i>
+                        <i class="fas fa-external-link-alt text-gray-400"></i>
                         {% endif %}
-                        </a>
-                    </li>
+                    </a>
+                </li>
 
                 {% endfor %}
             </ul>
             <!-- for every category in posts -->
             {% for category in site.categories %}
-                {% unless category.first == "" %}
-                    <div class="category-title">
-                        <span class="category-square"></span>
-                        {{ category | first }}
-                    </div>
-                    <ul class="category-list list-none">
-                        {% assign sortedPosts = category.last | sort: 'title' %}
-                        {% for post in sortedPosts %}
-                            <li><a class="category-items" href="{{ post.url }}">
-                                <i class="category-items-bullet fas fa-caret-right"></i>
-                                {{ post.title }}
-                                </a></li>
-                        {% endfor %}
-                    </ul>
-                {% endunless %}
+            {% unless category.first == "" %}
+            <div class="category-title">
+                <span class="category-square"></span>
+                {{ category | first }}
+            </div>
+            <ul class="category-list list-none">
+                {% assign sortedPosts = category.last | sort: 'title' %}
+                {% for post in sortedPosts %}
+                <li><a class="category-items" href="{{ post.url }}">
+                        <i class="category-items-bullet fas fa-caret-right"></i>
+                        {{ post.title }}
+                    </a></li>
+                {% endfor %}
+            </ul>
+            {% endunless %}
             {% endfor %}
 
 
@@ -83,29 +83,49 @@ title: "Hem"
         <!-- right column (posts) -->
         <div id="blog_view" class="md:w-2/3 w-full">
             <div class="text-2xl text-blue-800 border-b-2 font-bold border-yellow-500 mb-4">Inlägg</div>
-            <!-- post -->
+
+            <!-- search bar -->
+            <label for="default-search"
+                class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
+            <div class="relative my-4">
+                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                    <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+                <input type="search" id="search"
+                    class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Sök efter inlägg...">
+            </div>
+            <!-- filtered posts -->
+            <div id="match-list" class="z-10 rounded-md mb-4 shadow-md"></div>
+
+
+            <!-- posts -->
             {% for post in paginator.posts %}
-                {% unless post.category == "Huvudmeny" %}
-                {% unless post.category == "Bloggbok" %}
-                <a href="{{post.url}}" class="block mb-8 shadow-md hover:bg-gray-200">
-                    <div class="p-2">
-                        {% unless post.image == nil or post.image == "" %}
-                        <img class="w-full object-cover max-h-60 mb-5" src="{{post.image}}" alt="">
-                        {% endunless %}
-                        <div class="text-xl text-blue-700">{{post.title}}</div>
-                        {% include post_description.html %}
-                    </div>
-                </a>
-                {% endunless %}
-                {% endunless %}
+            {% unless post.category == "Huvudmeny" %}
+            {% unless post.category == "Bloggbok" %}
+            <a href="{{post.url}}" class="block mb-8 shadow-md hover:bg-gray-200">
+                <div class="p-2">
+                    {% unless post.image == nil or post.image == "" %}
+                    <img class="w-full object-cover max-h-60 mb-5" src="{{post.image}}" alt="">
+                    {% endunless %}
+                    <div class="text-xl text-blue-700">{{post.title}}</div>
+                    {% include post_description.html %}
+                </div>
+            </a>
+            {% endunless %}
+            {% endunless %}
             {% endfor %}
 
             <!-- Pagination links -->
             <div class="flex justify-center items-center">
                 <!-- Enabled back -->
                 {% if paginator.previous_page %}
-                <a href="{{ paginator.previous_page_path }}#blog_view"
-                    class="paginate-button-enabled">&#10094; Tillbaka</a>
+                <a href="{{ paginator.previous_page_path }}#blog_view" class="paginate-button-enabled">&#10094;
+                    Tillbaka</a>
                 {% else %}
                 <!-- Disabled back -->
                 <span class="paginate-button-disabled">&#10094; Tillbaka</span>
@@ -116,8 +136,7 @@ title: "Hem"
                 </span>
                 {% if paginator.next_page %}
                 <!-- Enabled next -->
-                <a href="{{ paginator.next_page_path }}#blog_view"
-                    class="paginate-button-enabled">Nästa &#10095;</a>
+                <a href="{{ paginator.next_page_path }}#blog_view" class="paginate-button-enabled">Nästa &#10095;</a>
                 {% else %}
                 <!-- Disabled next -->
                 <span class="paginate-button-disabled">Nästa &#10095;</span>
@@ -126,4 +145,3 @@ title: "Hem"
         </div>
     </div>
 </div>
-
