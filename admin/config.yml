@@ -1,3 +1,5 @@
+locale: 'se'
+
 backend:
   name: github
   repo: Janble2021/bleckert_se
