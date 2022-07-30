@@ -7,7 +7,8 @@ module.exports = {
     './_posts/*.md',
     './*.html',
     './_site/**/*.html',
-		'./_site/*.html'
+		'./_site/*.html',
+    './assets/js/*.js'
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
