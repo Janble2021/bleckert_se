@@ -1,4 +1,7 @@
 locale: 'se'
+site_url: https://bleckert.se
+logo_url: https://bleckert.se/assets/img/B_logo_big.png
+
 
 backend:
   name: github
