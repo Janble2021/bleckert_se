@@ -4,18 +4,20 @@
 
 Site: https://bleckert.se/
 
-Site: https://janble2021.github.io/
-
 Use "bundle exec jekyll serve" for local development.
 
 # General
 Site uses:
 1. Tailwind for styling.
 2. Jekyll for generating static pages.
-3. Github pages for hosting.
+3. Netlify for hosting.
+4. 4. Netlify CMS for adding blog posts.
 
 # Committing code
-Push code to master. A workspace action will automatically build the code to branch "gh-pages".
+Push code to main. Code will be automatically pushed and built on Netlify
+
+# Shout outs
+https://www.youtube.com/watch?v=1iysNUrI3lw
 
 ---
 
